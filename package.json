@@ -1,0 +1,44 @@
+{
+  "name": "mailgirl",
+  "version": "0.1.0",
+  "description": "A RESTful service for sending templated e-mails upon request",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha -b --no-diff test/*.js",
+    "coverage": "nyc -r html -r text-summary mocha -b --no-diff --no-warnings test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/GCSBOSS/mailgirl.git"
+  },
+  "keywords": [
+    "mail",
+    "email",
+    "server",
+    "http",
+    "rest",
+    "trigger",
+    "send",
+    "template",
+    "ejs",
+    "docker",
+    "service"
+  ],
+  "author": "Guilherme C. Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/GCSBOSS/mailgirl/issues"
+  },
+  "homepage": "https://gitlab.com/GCSBOSS/mailgirl#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "nodecaf": "^0.7.8",
+    "nodemailer": "^6.3.0"
+  },
+  "bin": {
+    "mailgirl": "bin/mailgirl.js"
+  },
+  "devDependencies": {
+    "muhb": "^1.0.0"
+  }
+}
