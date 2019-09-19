@@ -75,6 +75,18 @@ describe('Mailgirl', function(){
             await app.stop();
         });
 
+        it('Should rotate setup arrays when requested', async function() {
+            await start({ rotations: { foo: [ 'bar', 'baz' ] } });
+            let { assert } = await base.post(
+                'preview/rotate',
+                {'Content-Type': 'application/json'},
+                '{"a":"foobaz"}'
+            );
+            assert.status.is(200);
+            assert.body.exactly('barbazbar');
+            await app.stop();
+        });
+
     });
 
     describe('E-mail', function(){

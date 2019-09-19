@@ -1,6 +1,7 @@
 
 
 templatesDir = './templates'
+rotations = false
 
 [log]
 level = 'info'
